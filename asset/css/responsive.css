@@ -1,7 +1,31 @@
 
 /* small device */
 @media screen and (max-width:576px){
-    
+  .navbar{
+    padding: 0;
+  }
+    /* menu icon */
+    .menu-logo i{
+        display: none;
+    }
+    .menu-logo .logo-text{
+      font-size: 1rem;  
+    }
+
+    /* <!-- search bar and mike --> */
+    input,
+    .search,
+    .microphone,
+    .profile,
+    .upload{
+        display: none;
+    }
+    .search-icon{
+      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 }
 
 @media screen and (min-width:576px) and (max-width:992px){

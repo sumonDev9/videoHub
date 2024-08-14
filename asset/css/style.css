@@ -8,13 +8,26 @@
     list-style: none;
     font-family: "Poppins", sans-serif;
 }
-a{
-    text-decoration: none;
+.hide{
+    display: none;
 }
+/* Light and dark mode start*/
+body.active{
+    --text-color-1:#333;
+    --bg-color-1:#fff;
+    --bg-color-2:#eee;
+   
+}
+/* Light and dark mode End*/
+:root{
+    --text-color-1:rgb(255, 255, 255);
+    --bg-color-1:#010313;
+    --bg-color-2:rgb(34,34,34);
 
+}
 /* share */
 .header{
-  background-color: #010313;
+  background-color: var(--bg-color-1);
   position: fixed;
     z-index: 10;
 }
@@ -24,7 +37,7 @@ a{
     padding: 0px 1%;
 }
 .fa-bars{
-    color: rgb(255, 255, 255);
+    color:var(--text-color-1);
     font-size: 1.6rem;
 }
 
@@ -34,9 +47,18 @@ a{
     z-index: 2;
    cursor: pointer;
 }
+.bghover:hover{
+    width: 45px;
+    height: 45px;
+    background-color: var(--bg-color-2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .iconhover{
     display: flex;
-    justify-content: s;
+    justify-content: center;
     flex-direction: column;
 }
 .iconhover .tooltip{
@@ -47,7 +69,7 @@ a{
     font-size: 1rem;
     padding: 10px 18px;
     border-radius: .8rem;
-    color: rgb(255, 255, 255);
+    color: var(--text-color-1);
     font-weight: 600;
     opacity: 0;
     pointer-events: none;
@@ -77,7 +99,7 @@ a{
     height: 40px;
 }
 .menu-logo .logo-text{
-    color: rgb(255, 255, 255);
+    color: var(--text-color-1);
     justify-content: center;
     align-items: center;
     margin-top: 10px;
@@ -97,10 +119,10 @@ a{
     width: 480px;
     height: 45px;
     padding: 0 1.5rem;
-    border: 1px solid  rgb(34, 34, 34);
+    border: 1px solid  var(--bg-color-2);
     background: transparent;
     border-radius: 25px 0 0 25px;
-    color: rgb(255, 255, 255);
+    color: var(--text-color-1);
     
 }
 .search-box input:focus{
@@ -111,21 +133,23 @@ a{
 .search{
     width: 70px;
     height: 45px;
-    background-color:rgb(34, 34, 34);
+    background-color: var(--bg-color-2);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 0 25px 25px 0;
 }
 .search-box .fa-magnifying-glass{
-    color: aliceblue;
-    opacity: .5;
+    color:var(--text-color-1);
+    /* opacity: .5; */
     font-size: 1.5rem;
 }
 
 .microphone,
 .upload,
-.bell
+.bell,
+.dark,
+.search-icon
 {
     width: 45px;
     height: 45px;
@@ -133,50 +157,86 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background:rgb(34, 34, 34);
+    background: var(--bg-color-2);
     border-radius: 50%;
 }
 .fa-microphone,
 .fa-video,
-.fa-bell
+.fa-bell,
+.fa-moon,
+.fa-sun,
+.fa-magnifying-glass
 {
-    color: rgb(255, 255, 255);
+    color:var(--text-color-1);
     font-size: 1.4rem;
     opacity: .9;
     cursor: pointer;
 }
 
 /* video notification icon and profile pic */
+
 .icon-profile{
     justify-content: center;
     align-items: center;
 }
 
-
 .profile{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: rgb(255, 255, 255);
+    /* background: var(--text-color-1); */
     display: flex;
     justify-content:center;
     align-items: center;
+}
+
+.profile-img img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 .fa-user{
     font-size: 1.4rem;
 }
 
-
 .upload,
-.bell{
+.bell,
+.search-icon,
+.dark
+{
     background: none;
 }
-
+.search-icon{
+    display: none;
+}
+.bell{
+    position: relative;
+    z-index: 0;
+}
+.bghover{
+    z-index: 0;
+}
+.notification-bell{
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    border-radius: 40%;
+    background-color: red;
+    top: 0;
+    right: 0px;
+    color: var(--text-color-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    padding: 1px;
+    z-index: 1;
+}
 /* navbar end here */
 
 /* left side bar start style here */
 .sidebar{
-    background-color: #010313;
+    background-color: var(--bg-color-1);
     /* background-color: aqua; */
     width: 15%;
     height: 100vh;
@@ -196,16 +256,16 @@ a{
     width: 100%;
     padding: 10px 10px;
     border-radius: .8rem;
-    color:  rgb(255, 255, 255);
+    color:  var(--text-color-1);
     text-decoration: none;
 }
 .toggle-icon a:hover{
-    background:rgb(34, 34, 34);
-    color:  rgb(255, 255, 255);
+    background: var(--bg-color-2);
+    color:  var(--text-color-1);
 }
-.toggle-icon a:nth-child(1){
-    background:rgb(34, 34, 34);
-    color:  rgb(255, 255, 255);
+.toggle-icon #active{
+    background: var(--bg-color-2);
+    color:  var(--text-color-1);
 }
 .toggle-icon a i{
  font-size: 1.25rem;
@@ -213,13 +273,13 @@ a{
 }
 .title-heding{
     font-size: 1rem;
-    color: rgb(255, 255, 255);
+    color: var(--text-color-1);
     padding: 10px 10px;
     border-radius: .8rem;
 }
 .title-heding:hover{
-    background:rgb(34, 34, 34);
-    color:  rgb(255, 255, 255);
+    background: var(--bg-color-2);
+    color:  var(--text-color-1);
 }
  .title{
     font-size: 14px;
@@ -232,7 +292,7 @@ a{
     width: 60%;
  }
 .sidebar hr{
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid var(--text-color-1);
 }
 .profile-pic{
     width: 25px;
@@ -274,3 +334,28 @@ a{
     background: #555; 
   }
 /* left side bar end style here */
+
+/* main style here */
+
+  /* topic-sildebar start here */
+/* .silder{
+    padding-left: 17%;
+   
+  }
+  .text-silder{
+    width: 100%;
+  }
+  .silde-icons{
+    border: 1px solid red;
+  } */
+  main{
+    padding-left: 15%;
+    padding-top: 4.8rem;
+    border: 2px solid red;
+   }
+   .silde-icons{
+    border: 2px solid red;
+   }
+  /* topic-sildebar end here */
+
+/* main end here */

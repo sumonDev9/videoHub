@@ -21,7 +21,7 @@
           <nav class="navbar d-flex">
             <!-- menu toggle and logo img -->
             <div class="menu-logo d-flex">
-                <i class="fa-solid fa-bars me-3"></i>
+                <i class="fa-solid fa-bars  me-3"></i>
                 <img class="videoHub-logo" src="./asset/images/videohub-logo.png" alt="">
                 <h3 class="logo-text">VideoHub</h3>
              </div>
@@ -41,23 +41,29 @@
 
             <!-- video notification icon and profile pic -->    
              <div class="icon-profile  d-flex">
+                <!-- light and dark mood -->
+                <div class="dark iconhover me-3">
+                    <div class="toggle bghover fas fa-sun" id="theme-btn"></div>
+                    <div class="tooltip">Dark and light mode</div>
+                </div>
                 <!-- upload -->
                 <div class="upload iconhover me-3">
-                    <div class="toggle"><i class="fa-solid fa-video"></i></div>
+                    <div class="toggle bghover"><i class="fa-solid fa-video"></i></div>
                     <div class="tooltip">Create</div>
                 </div>
                 <!-- bell -->
                <div class="bell iconhover me-3">
-                <div class="toggle"><i class="fa-solid fa-bell"></i></div>
-                <div class="notification-bell"></div>
+                <div class="toggle bghover"><i class="fa-regular fa-bell"></i></div>
+                <div class="notification-bell">3+</div>
                 <div class="tooltip">notifications</div>
                </div> 
                <!-- profile -->
                <div class="profile">
-                <div class="profile-img"><i class="fa-solid fa-user"></i></div>
+                <div class="profile-img"><img src="./asset/images/member-03.jpg" alt=""></div>
                </div>
-
-
+             <!-- search -->
+             <div class="search-icon iconhover">
+                <div class="toggle bghover"><i class="fa-solid fa-magnifying-glass"></i></div>
              </div>
           </nav>
         </header>
@@ -68,7 +74,7 @@
 
     <div class="sidebar">
         <div class="toggle-icon">
-            <a href="#"><i class="fa-solid fa-house"></i><span class="title">Home</span></a>
+            <a href="#" id="active"><i class="fa-solid fa-house"></i><span class="title">Home</span></a>
             <a href="#"><i class="fas fa-bolt"></i></i><span class="title">shorts</span></a>
             <a href="#"><i class="fas fa-play-circle"></i><span class="title">Subscriptions</span></a>
         </div>
@@ -105,15 +111,32 @@
             <a href=""><i class="fas fa-podcast"></i><span class="title">Podcasts</span></a>
             <a href=""></a>
         </div>
+        <hr>
+        <div class="toggle-icon">
+            
+            <a href="#"><i class="fas fa-cog"></i><span class="title">Setting</span></a>
+            <a href="#"><i class="fas fa-history"></i><span class="title">Report History</span></a>
+            <a href="#"><i class="fas fa-question-circle"></i><span class="title">Help</span></a>
+            <a href="#"><i class="fas fa-comment-alt"></i><span class="title">Send feedback</span></a>
+        </div>
     </div>
 
     <!-- aside bar end here -->
 
     <!-- main start here -->
 
-     <main>
-
-     </main>
+     <!-- <div class="sumon"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti facere eveniet accusamus corporis dolorem suscipit eum cupiditate vel, totam culpa sint nobis debitis adipisci tenetur expedita commodi exercitationem in odio ut repellendus deserunt eligendi aspernatur. Commodi molestiae eos perferendis ut sed aliquid, cumque rem fugiat vel aliquam eveniet tempore quos.</p></div> -->
+       <main>
+         <!-- topic-sildebar start here -->
+         <div class="container-fluid silder">
+            <div class="text-silder">
+                <div class="silde-icons"><i class="fa-solid fa-angle-left"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, amet odit, nulla, voluptates distinctio et voluptate totam rem dolorum recusandae quae mollitia expedita suscipit maiores?</div>
+            </div>
+         </div>
+       </main>
+    
+        <!-- topic-sildebar end here -->
+    
 
     <!-- main end here -->
     
